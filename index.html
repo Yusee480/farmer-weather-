@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        .section{
+            background: #fff;
+            padding: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .head{
+            display: flex;
+            justify-content: space-between;
+            padding: 10vh;
+            justify-items: center;
+            
+        } 
+        .img{
+           width: 30rem;
+           border: none;
+           cursor: pointer;
+        }
+        .welcome{
+            margin-top: 8%;
+        }
+        button{
+            background-color: #28a745;
+            width: 15rem;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+        }
+        /* img:hover{
+            padding: 20px;
+            transition: 0.33s;
+            margin-left: 10rem;
+            transform: rotate(20);
+        } */
+        .slidee{
+            display: flex;
+            overflow: hidden;
+            width: 10%;
+            height: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Farmers' Weather App</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <!-- Add more links as needed -->
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section head">
+            <div class="welcome">
+                    <h2>Welcome to Farmers' Weather App</h2>
+                    <p>
+                        Our app provides real-time weather updates and farming tips to help you make informed <br> decisions and improve your crop yields.
+                        Explore the sections below to learn more about our services, <br> our mission, and how to  get in touch with us.
+                    </p>
+                    <div id="loader" style="display:none;">🔃loading....</div>
+                    <button onclick="navigatetopage()">Get start</button>
+            </div>
+           
+            <div><img class="img" src="images (17).jpeg" alt=""></div>
+        </section>
+        <div class="slideee">
+                <img src="images2.jpeg" alt="">
+                <img src="images2.jpeg" alt="">
+                <img src="images2.jpeg" alt="">
+                <img src="images2.jpeg" alt="">
+                <img src="images2.jpeg" alt="">
+                
+        </div>
+
+
+
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>
+                We are dedicated to supporting farmers by providing accurate weather forecasts and practical farming advice. Our goal is to enhance agricultural productivity and sustainability through technology.
+            </p>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>
+                For more information or inquiries, please reach out to us via the following contact details:
+            </p>
+            <p>
+                Email: support@farmersweatherapp.com<br>
+                Phone: +2348032980643
+            </p>
+        </section>
+        <section id="farming-tips" class="section">
+            <h2>Farming Tips</h2>
+            <ul>
+                <li>Monitor weather updates regularly to plan your farming activities.</li>
+                <li>Plant crops that are suitable for the current season and climate.</li>
+                <li>Implement irrigation systems to manage water supply efficiently.</li>
+                <li>Use organic fertilizers to improve soil health and crop yield.</li>
+                <li>Practice crop rotation to maintain soil fertility and reduce pests.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmers' Weather App</p>
+    </footer>
+
+    <script>
+        function navigatetopage() {
+            const loader = document.getElementById('loader');
+            loader.style.display = 'block';
+            setTimeout(() => {
+                window.location.href = 'location.html';
+            }, 2000);
+        }
+    
+    
+    </script>
+</body>
+</html>

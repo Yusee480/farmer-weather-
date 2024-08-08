@@ -1,0 +1,26 @@
+<img id="animated-image" src="img1.jpeg" alt="Animated Image">
+<p id="animated-text">Animated Text</p>
+
+<script>
+  const img = document.getElementById('animated-image');
+  const text = document.getElementById('animated-text');
+
+  img.style.transition = 'transform 2s';
+  text.style.transition = 'opacity 2s';
+
+  img.addEventListener('mouseover', () => {
+    img.style.transform = 'scale(1.1)';
+  });
+
+  img.addEventListener('mouseout', () => {
+    img.style.transform = 'scale(1)';
+  });
+
+  text.addEventListener('mouseover', () => {
+    text.style.opacity = '0.5';
+  });
+
+  text.addEventListener('mouseout', () => {
+    text.style.opacity = '1';
+  });
+</script>
